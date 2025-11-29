@@ -1,0 +1,39 @@
+# Pest Control Website Tasks
+
+- [ ] Planning
+    - [x] Analyze inspiration websites <!-- id: 0 -->
+    - [x] Create implementation plan <!-- id: 1 -->
+- [ ] Implementation
+    - [x] Setup project structure (HTML/CSS/JS) <!-- id: 2 -->
+    - [x] Create Design System (Variables, Typography, Colors) <!-- id: 3 -->
+    - [x] Implement Header/Navigation <!-- id: 4 -->
+    - [x] Implement Hero Section (Modern, Black & White) <!-- id: 5 -->
+    - [x] Implement Services Section <!-- id: 6 -->
+    - [x] Implement About/Why Us Section <!-- id: 7 -->
+    - [x] Implement Contact/Footer Section <!-- id: 8 -->
+    - [x] Add Animations and Interactions <!-- id: 9 -->
+    - [ ] Create Service Sub-pages <!-- id: 12 -->
+        - [x] Residential <!-- id: 13 -->
+        - [x] Commercial <!-- id: 14 -->
+        - [x] Wildlife <!-- id: 15 -->
+        - [x] Bed Bugs <!-- id: 16 -->
+        - [x] Rodents <!-- id: 17 -->
+        - [x] Insects <!-- id: 18 -->
+    - [ ] Enhance Design & Content <!-- id: 19 -->
+        - [x] Update accent color to Blue <!-- id: 20 -->
+        - [x] Generate and add educational pest images <!-- id: 21 -->
+            - [x] Rodents <!-- id: 22 -->
+            - [x] Bed Bugs <!-- id: 23 -->
+            - [x] Ants/Roaches (Insects) <!-- id: 24 -->
+            - [x] Wildlife <!-- id: 25 -->
+        - [ ] Revert to Black & White Theme <!-- id: 26 -->
+        - [ ] Resize and Optimize Images <!-- id: 27 -->
+        - [ ] Increase CTA Button Size <!-- id: 29 -->
+        - [ ] Mobile Optimization (Spacing, Touch Targets) <!-- id: 28 -->
+- [ ] Verification
+    - [x] Verify responsiveness <!-- id: 10 -->
+    - [x] Verify aesthetics (Apple-like feel) <!-- id: 11 -->
+- [ ] Deployment
+    - [ ] Create Deployment Guide <!-- id: 30 -->
+    - [ ] Deploy to Netlify/Vercel (User Action) <!-- id: 31 -->
+    - [ ] Connect Domain patelpest.ca (User Action) <!-- id: 32 -->
