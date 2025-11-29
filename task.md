@@ -20,20 +20,11 @@
         - [x] Rodents <!-- id: 17 -->
         - [x] Insects <!-- id: 18 -->
     - [ ] Enhance Design & Content <!-- id: 19 -->
-        - [x] Update accent color to Blue <!-- id: 20 -->
-        - [x] Generate and add educational pest images <!-- id: 21 -->
-            - [x] Rodents <!-- id: 22 -->
-            - [x] Bed Bugs <!-- id: 23 -->
-            - [x] Ants/Roaches (Insects) <!-- id: 24 -->
-            - [x] Wildlife <!-- id: 25 -->
-        - [ ] Revert to Black & White Theme <!-- id: 26 -->
-        - [ ] Resize and Optimize Images <!-- id: 27 -->
-        - [ ] Increase CTA Button Size <!-- id: 29 -->
-        - [ ] Mobile Optimization (Spacing, Touch Targets) <!-- id: 28 -->
-- [ ] Verification
-    - [x] Verify responsiveness <!-- id: 10 -->
-    - [x] Verify aesthetics (Apple-like feel) <!-- id: 11 -->
-- [ ] Deployment
-    - [ ] Create Deployment Guide <!-- id: 30 -->
+    - [x] Revert to Black & White Theme <!-- id: 26 -->
+    - [x] Resize and Optimize Images <!-- id: 27 -->
+    - [x] Increase CTA Button Size <!-- id: 29 -->
+    - [ ] Re-introduce Blue Accents (Electric Blue) <!-- id: 34 -->
+    - [x] Mobile Optimization (Spacing, Touch Targets) <!-- id: 28 -->
+    - [x] Push to GitHub (https://github.com/devptl23/Patel-Pest-Control-Website) <!-- id: 33 -->
     - [ ] Deploy to Netlify/Vercel (User Action) <!-- id: 31 -->
     - [ ] Connect Domain patelpest.ca (User Action) <!-- id: 32 -->
