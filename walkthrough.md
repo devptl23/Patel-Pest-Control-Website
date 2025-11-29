@@ -21,11 +21,10 @@ I have built a modern, high-performance pest control website with a strict focus
 - **SEO**: Semantic HTML tags (`<header>`, `<main>`, `<section>`, `<h1>`) and meta descriptions included.
 - **Service Pages**: Individual pages created for all services (Residential, Commercial, Wildlife, etc.) with detailed information and conversion elements.
 - **Visual Enhancements**:
-    - **Theme**: Reverted to a premium **Black & White** theme for a clean, modern aesthetic.
-    - **CTA Buttons**: Large, high-visibility buttons in White with Black text.
-    - **Images**: Optimized image sizing (max-height 350px).
-    - **Educational Images**: Realistic illustrations for major pests.
-    - **Mobile Optimization**: Improved spacing and layout for smaller screens.
+    - **Theme**: Reverted to a premium Black & White theme for a clean, modern aesthetic.
+    - **CTA Buttons**: Significantly increased size and visibility of "Call Now" buttons with high-contrast black text on white.
+    - **Images**: Optimized image sizing (max-height 350px) to balance visual appeal with content density.
+    - **Educational Images**: Added high-quality, realistic illustrations for major pests (Rodents, Bed Bugs, Cockroaches, Ants, Raccoons).
     - **Mobile Optimization**: Improved spacing and layout for smaller screens.
 
 ## Verification

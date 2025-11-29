@@ -66,14 +66,13 @@ Create a premium, "Apple-like" pest control website with a black and white aesth
 
 ### Design Refinements (Phase 2)
 #### [MODIFY] [styles.css](file:///C:/Users/Dev/.gemini/antigravity/scratch/pest-control-site/styles.css)
-- **Theme Update (Blue Accents)**:
-    - Set `--accent` to `#2962ff` (Electric Blue).
-    - Set `--accent-hover` to `#1e4bd1`.
-    - Update CTA buttons to use this blue background with White text for high contrast.
-    - Add subtle blue glows or borders to cards on hover to add "personality".
+- **Theme Reversion**:
+    - Revert `--accent` to `#ffffff` (White) or `#333333` (Dark Gray) for monochrome look.
+    - Revert `--accent-hover` to `#e5e5e5` or `#555555`.
+    - Ensure text contrast on buttons (Black text on White buttons).
 - **CTA Enhancements**:
-    - Maintain the increased padding (`16px 32px` base, `20px 56px` large).
-    - Maintain the increased font size.
+    - Increase `.cta-button` padding to `16px 32px` (base) and `20px 56px` (large).
+    - Increase font size to `1.1rem` (base) and `1.5rem` (large).
 - **Image Optimization**:
     - Reduce `.service-image` max-height to `300px` or `350px` (was 500px).
     - Ensure `object-fit: cover` is maintained.
