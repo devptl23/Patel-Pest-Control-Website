@@ -715,17 +715,27 @@ h3 {
     .cta-group {
         flex-direction: column;
         width: 100%;
+        align-items: center;
+        /* Center buttons */
+        gap: var(--spacing-sm);
+        /* Better spacing between buttons */
     }
 
     .cta-group .cta-button {
         width: 100%;
+        max-width: 350px;
+        /* Limit width on mobile */
     }
 
     .cta-button.large {
         min-width: auto;
         width: 100%;
-        font-size: 1.25rem;
-        padding: 20px 32px;
+        max-width: 350px;
+        /* Prevent too wide buttons */
+        font-size: 1.1rem;
+        /* Smaller font for mobile */
+        padding: 16px 28px;
+        /* Reduced padding for better look */
     }
 
     h1 {
