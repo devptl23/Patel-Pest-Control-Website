@@ -365,28 +365,203 @@ h3 {
 
 /* Footer */
 .footer {
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-lg) 0 var(--spacing-md);
     border-top: 1px solid var(--border-color);
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
 }
 
-.footer-links {
+.footer h4 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.footer-links,
+.footer-contact {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-    text-align: right;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--text-primary);
 }
 
 .footer-bottom {
     text-align: center;
     font-size: 0.875rem;
     color: var(--text-secondary);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Testimonials */
+.testimonial-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.testimonial-track {
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial {
+    display: none;
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Disable hover effect on testimonial cards */
+.testimonial.card {
+    transform: none !important;
+    cursor: default;
+}
+
+.testimonial.active {
+    display: block;
+    opacity: 1;
+}
+
+.testimonial .stars {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.testimonial strong {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.carousel-arrow:hover {
+    background-color: var(--accent);
+    color: #000000;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow-left {
+    left: 0;
+}
+
+.carousel-arrow-right {
+    right: 0;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0;
+}
+
+.carousel-dot.active {
+    background-color: var(--accent);
+    transform: scale(1.3);
+}
+
+.carousel-dot:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+
+.contact-form select {
+    cursor: pointer;
 }
 
 /* Sticky Mobile CTA */
@@ -562,11 +737,34 @@ h3 {
     }
 
     .footer-content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: var(--spacing-md);
+        text-align: center;
     }
 
-    .footer-links {
-        text-align: left;
+    .footer-links,
+    .footer-contact {
+        text-align: center;
+    }
+
+    .testimonial-carousel {
+        padding: 0 50px;
+    }
+
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.75rem;
+    }
+
+    .testimonial p {
+        font-size: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 16px;
+        /* Prevents zoom on iOS */
     }
 }
