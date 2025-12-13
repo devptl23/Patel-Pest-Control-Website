@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                 </ul>
             </nav>
             <a href="tel:4164389875" class="cta-button header-cta">
-                <span class="icon">📞</span> 416-438-9875
+                <span class="icon">📞</span> <span class="phone-number">416-438-9875</span>
             </a>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span>
@@ -54,10 +55,14 @@
                 <p class="hero-subtitle fade-in-up delay-1">Professional. Discreet. Effective.<br>Serving Toronto & GTA.
                 </p>
                 <div class="hero-actions fade-in-up delay-2">
-                    <a href="tel:4164389875" class="cta-button hero-cta">
+                    <a href="tel:4164389875" class="cta-button hero-cta large">
                         Call Now: 416-438-9875
                     </a>
-
+                    <div class="trust-badges">
+                        <span>⭐ 500+ Happy Customers</span>
+                        <span>⏰ Response: <5 Minutes</span>
+                                <span>🔒 Licensed & Insured</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,7 +141,14 @@
         <section class="section cta-section">
             <div class="container">
                 <h2 class="fade-in">Ready to reclaim your space?</h2>
-                <a href="tel:4164389875" class="cta-button large fade-in delay-1">Call 416-438-9875</a>
+                <div class="cta-group fade-in delay-1">
+                    <a href="tel:4164389875" class="cta-button large">📞 Call 416-438-9875</a>
+                    <a href="sms:4164389875?body=I need pest control help" class="cta-button large secondary-cta">💬
+                        Text Us</a>
+                </div>
+                <div class="trust-badges-footer">
+                    <span>Same-Day Service Available</span>
+                </div>
             </div>
         </section>
     </main>
@@ -162,7 +174,7 @@
     </footer>
 
     <!-- Sticky Mobile Call Button -->
-    <a href="tel:4164389875" class="sticky-mobile-cta">
+    <a href="tel:4164389875" class="sticky-mobile-cta pulse">
         Call Now: 416-438-9875
     </a>
 

@@ -27,6 +27,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Click Tracking for Phone Calls
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+        link.addEventListener('click', function () {
+            const phoneNumber = this.getAttribute('href').replace('tel:', '');
+            const buttonText = this.textContent.trim();
+
+            console.log('Phone Click Tracked:', {
+                phone: phoneNumber,
+                button: buttonText,
+                location: this.className,
+                timestamp: new Date().toISOString()
+            });
+
+            // If you add Google Analytics later, use:
+            // gtag('event', 'phone_call', {
+            //     'event_category': 'conversion',
+            //     'event_label': buttonText,
+            //     'phone_number': phoneNumber
+            // });
+        });
+    });
+
+    // Click Tracking for SMS
+    document.querySelectorAll('a[href^="sms:"]').forEach(link => {
+        link.addEventListener('click', function () {
+            const phoneNumber = this.getAttribute('href').split('?')[0].replace('sms:', '');
+            const buttonText = this.textContent.trim();
+
+            console.log('SMS Click Tracked:', {
+                phone: phoneNumber,
+                button: buttonText,
+                location: this.className,
+                timestamp: new Date().toISOString()
+            });
+
+            // If you add Google Analytics later, use:
+            // gtag('event', 'sms_click', {
+            //     'event_category': 'conversion',
+            //     'event_label': buttonText,
+            //     'phone_number': phoneNumber
+            // });
+        });
+    });
+
     // Intersection Observer for Fade-in Animations
     const observerOptions = {
         threshold: 0.1,

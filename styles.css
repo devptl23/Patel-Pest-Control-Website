@@ -5,9 +5,12 @@
     --text-secondary: #a1a1a6;
     --accent: #ffffff;
     --accent-hover: #e5e5e5;
+    --accent-secondary: #4ade80;
+    --accent-secondary-hover: #22c55e;
+    --urgency-color: #fbbf24;
     --border-color: #333333;
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --nav-height: 60px;
+    --nav-height: 80px;
     --container-width: 1200px;
     --spacing-xs: 8px;
     --spacing-sm: 16px;
@@ -91,9 +94,98 @@ h3 {
 }
 
 .cta-button.large {
-    padding: 20px 56px;
+    padding: 24px 64px;
     /* Even larger for hero */
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    min-width: 400px;
+}
+
+/* Secondary CTA Button */
+.cta-button.secondary-cta {
+    background-color: var(--accent-secondary);
+    color: #000000;
+}
+
+.cta-button.secondary-cta:hover {
+    background-color: var(--accent-secondary-hover);
+}
+
+.cta-subtext {
+    display: block;
+    font-size: 0.7em;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+/* CTA Group */
+.cta-group {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Trust Badges */
+.trust-badges {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--spacing-md);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.trust-badges span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.trust-badges-footer {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-md);
+    font-size: 1rem;
+    color: var(--urgency-color);
+    font-weight: 600;
+}
+
+.trust-badges-footer span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Urgency Banner */
+.urgency-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--urgency-height);
+    background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    z-index: 1001;
+    animation: urgencySlide 0.5s ease forwards;
+}
+
+@keyframes urgencySlide {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 /* Header */
@@ -120,7 +212,7 @@ h3 {
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
@@ -131,22 +223,31 @@ h3 {
 
 .nav-list {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
 }
 
 .nav-list a {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    font-weight: 500;
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .nav-list a:hover {
-    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
 }
 
 .header-cta {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    padding: 14px 28px;
+    font-size: 1.05rem;
+}
+
+.header-cta .phone-number {
+    font-size: 1.15rem;
+    font-weight: 700;
 }
 
 .mobile-menu-btn {
@@ -296,16 +397,35 @@ h3 {
     transform: translateX(-50%);
     width: 90%;
     max-width: 400px;
-    background-color: var(--accent);
-    color: #000000;
-    padding: 16px;
+    background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+    color: #ffffff;
+    padding: 18px;
     border-radius: 9999px;
     text-align: center;
     font-weight: 700;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    font-size: 1.1rem;
+    box-shadow: 0 10px 40px rgba(255, 68, 68, 0.6);
     z-index: 999;
     display: none;
     /* Hidden by default on desktop */
+}
+
+.sticky-mobile-cta.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translateX(-50%) scale(1);
+        box-shadow: 0 10px 40px rgba(255, 68, 68, 0.6);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.05);
+        box-shadow: 0 15px 50px rgba(255, 68, 68, 0.8);
+    }
 }
 
 /* Mobile Menu */
@@ -402,6 +522,35 @@ h3 {
 
     .sticky-mobile-cta {
         display: block;
+        font-size: 1rem;
+    }
+
+    .trust-badges {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        font-size: 0.8rem;
+    }
+
+    .trust-badges-footer {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        font-size: 0.875rem;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-group .cta-button {
+        width: 100%;
+    }
+
+    .cta-button.large {
+        min-width: auto;
+        width: 100%;
+        font-size: 1.25rem;
+        padding: 20px 32px;
     }
 
     h1 {
